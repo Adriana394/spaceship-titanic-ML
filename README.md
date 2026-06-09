@@ -10,7 +10,7 @@ The workflow compares Logistic Regression and XGBoost models for a binary classi
 
 ```text
 .
-|-- Data/
+|-- data/
 |   |-- train.csv               # raw Kaggle training data
 |   |-- test.csv                # raw Kaggle test data
 |   |-- processed_train.csv     # cleaned data (produced by notebook 02)
@@ -27,7 +27,7 @@ The workflow compares Logistic Regression and XGBoost models for a binary classi
 ## Notebooks
 
 1. **`01_eda.ipynb` — Exploratory Data Analysis.** Inspects data types, missing values, the target distribution, the `Cabin` column, numeric feature distributions, and the relationship between key features and the target. This notebook is read-only and does not modify the data.
-2. **`02_preprocessing.ipynb` — Preprocessing & Feature Engineering.** Drops non-predictive columns, splits `Cabin` into `Deck`/`Number`/`Side`, imputes missing values (all statistics computed on the training set only), engineers the `OnboardSpending` feature, and writes the cleaned data to `Data/processed_*.csv`.
+2. **`02_preprocessing.ipynb` — Preprocessing & Feature Engineering.** Drops non-predictive columns, splits `Cabin` into `Deck`/`Number`/`Side`, imputes missing values (all statistics computed on the training set only), engineers the `OnboardSpending` feature, and writes the cleaned data to `data/processed_*.csv`.
 3. **`03_modeling.ipynb` — Modelling.** Trains and compares Logistic Regression and XGBoost across eight experiments (baseline, Grid Search, `OnboardSpending`, and feature selection), with confusion-matrix and odds-ratio interpretability for the tuned logistic regression.
 
 ### Avoiding data leakage
